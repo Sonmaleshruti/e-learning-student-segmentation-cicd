@@ -1,0 +1,45 @@
+{
+    "project_name": "E-Learning Student Behavioral Segmentation Engine",
+    "algorithm": "K-Means",
+    "number_of_clusters": 4,
+    "training_students": 3736,
+    "number_of_features": 20,
+    "evaluation": {
+        "silhouette_score": 0.345,
+        "davies_bouldin_index": 1.235,
+        "calinski_harabasz_score": 739.8088
+    },
+    "features": [
+        "total_interactions",
+        "active_days",
+        "unique_courses",
+        "unique_components",
+        "unique_events",
+        "activity_span_days",
+        "quiz_attempts",
+        "unique_quizzes",
+        "average_quiz_score",
+        "median_quiz_score",
+        "average_quiz_duration",
+        "median_quiz_duration",
+        "forum_posts",
+        "forum_active_days",
+        "forum_courses",
+        "average_message_length",
+        "median_message_length",
+        "interactions_per_active_day",
+        "quiz_attempts_per_active_day",
+        "forum_posts_per_active_day"
+    ],
+    "behavior_segments": {
+        "0": "Low-Activity / Limited Participation",
+        "1": "Consistently Engaged",
+        "2": "Assessment-Strong / Focused Learners",
+        "3": "Highly Interactive / Forum-Intensive"
+    },
+    "monitoring": {
+        "baseline_method": "Median monthly activity",
+        "baseline_activity": 24.11,
+        "deviation_threshold_percent": 50
+    }
+}
